@@ -6,8 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const siderbarItems = document.getElementsByClassName('sidebar-item')
   const lightModeSwitchButton = document.getElementById('light-mode-switch')
   const lightModeText = document.getElementById('light-mode-text')
-  const nextButton = document.getElementById('next-button')
-
 
   let isSidebarOpen = false
   let lightModeOn = true
@@ -51,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   lightModeSwitchButton.addEventListener('click', function(e){
+    console.log('CLICKED')
     if (e.target === lightModeSwitchButton.querySelector('input')) {
       document.body.classList.toggle('dark-mode')
       if (lightModeOn === true) {
@@ -71,8 +70,4 @@ document.addEventListener('DOMContentLoaded', function() {
       window.location.href = `../html/${pageList[index + 1]}`
     }
   })
-
-
-  
-
 })

@@ -10,8 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header id="header">
-    <a href="#main" class="skip-to-main-content-link" id="skip-button">Skip to content</a>
+  <header>
     <button aria-label="Menu" aria-controls="navigation" aria-expanded="false" id="sidebar-open-button">☰</button>
     <nav role="navigation" aria-expanded="false" class="sidebar">
       <button id="sidebar-close-button" >X</button>
@@ -25,11 +24,14 @@
         <li><a href="references.html" tabindex="-1" class="sidebar-item">References</a></li>
       </ul>
     </nav>
-    <label class="switch" id="light-mode-switch">
-      <input type="checkbox" tabindex="0" aria-label="Toggle dark and light mode">
-      <span class="slider"></span>
+    <div id="dark-mode-div">
       <span id="light-mode-text">Select dark mode</span>
+    <label class="switch" id="light-mode-switch">
+      <input type="checkbox" tabindex="0" aria-label="Toggle dark and light mode"> 
+      <span class="slider"></span>
     </label>
+    </div>
+    
   </header>
   <main>
     <h1 id="tutorial-title">Web Accessibility Tutorial</h1>

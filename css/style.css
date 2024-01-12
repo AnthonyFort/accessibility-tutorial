@@ -15,11 +15,6 @@ body {
     cursor: pointer;
     position: absolute; 
   }
-
-  #tutorial-title {
-    text-align: center;
-  }
-
   .sidebar {
     background-color: #2A2A2A;
   }
@@ -28,6 +23,18 @@ body {
   }
   a {
     color: #BEBEBE;
+  }
+  .text-content {
+    color: #F8F8F8;
+  }
+  #tutorial-title {
+    color: #F8F8F8;
+  }
+  #intro-image {
+    fill: #F8F8F8;
+  }
+  #sidebar-open-button {
+    color: #F8F8F8;
   }
 }
 
@@ -71,14 +78,13 @@ header {
   color: white;
 }
 
-#header button {
+header button {
   background: none;
   border: none;
   color: #242424; 
   padding: 12px;
   font-size: 2rem;
   cursor: pointer;
-  position: absolute; 
 }
 
 .switch {
@@ -86,8 +92,8 @@ header {
   width: 60px;
   height: 34px;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 
 .switch input {
@@ -136,16 +142,13 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-#light-mode-text {
-  margin-top: 40px;
-}
-
 footer {
   text-align: right;
 }
 
 #intro-image {
-  width: 100px;
+  width: 180px;
+  fill: #333333;
 }
 
 #intro-content {
@@ -154,4 +157,26 @@ footer {
 
 .text-content {
   max-width: 400px;
+  color: #333333;
+}
+
+#tutorial-title {
+  text-align: center;
+  color: #333333;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+#light-mode-text {
+  margin-right: 5px;
+}
+
+#dark-mode-div {
+  display: flex;
+  align-items: center;
 }
