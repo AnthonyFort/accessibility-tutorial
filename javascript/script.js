@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const semanticAnswertext = document.getElementById('semantic-answer-text')
   const ariaAnswerButton = document.getElementById('aria-answer-button')
   const sampleAriaAnswer = document.getElementById('sample-aria-answer')
-
+  
   let isSidebarOpen = false
   let lightModeOn = true
   let currentFontSizeIndex = 0
@@ -60,18 +60,20 @@ document.addEventListener('DOMContentLoaded', function() {
     } 
   }
 
-  lightModeSwitchButton.addEventListener('click', function(e){
+  lightModeSwitchButton.addEventListener('click', function(e) {
     if (e.target === lightModeSwitchButton.querySelector('input')) {
-      document.body.classList.toggle('dark-mode')
-      if (lightModeOn === true) {
+      lightModeOn = !lightModeOn
+      if (lightModeOn) {
+        document.body.classList.remove('dark-mode')
         lightModeText.innerText = 'Select dark mode'
-        lightModeOn = false
       } else {
+        document.body.classList.add('dark-mode')
         lightModeText.innerText = 'Select light mode'
-        lightModeOn = true
       }
+      savePreferences()
     }
   })
+  
 
   document.addEventListener('keydown', function(e){
     const currentLocation = window.location.href
@@ -131,5 +133,28 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     })
   }
+
+  function savePreferences() {
+    localStorage.setItem('lightModeOn', lightModeOn.toString())
+  }
+
+  function loadPreferences() {
+    const savedLightPreference = localStorage.getItem('lightModeOn')
+    if (savedLightPreference === 'true') {
+      lightModeOn = true
+      document.body.classList.remove('dark-mode')
+      lightModeText.innerText = 'Select dark mode'
+      lightModeSwitchButton.querySelector('input').checked = false
+    } else if (savedLightPreference === 'false') {
+      lightModeOn = false
+      document.body.classList.add('dark-mode')
+      lightModeText.innerText = 'Select light mode'
+      lightModeSwitchButton.querySelector('input').checked = true
+    }
+  }
+  
+  
+
+  loadPreferences()
   
 })
