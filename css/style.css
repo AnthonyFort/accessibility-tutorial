@@ -6,10 +6,29 @@ body {
 .dark-mode {
   background-color: #1F1F1F;
   color: #F8F8F8;
+  #header button {
+    background: none;
+    border: none;
+    color: #F8F8F8; 
+    padding: 12px;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute; 
+  }
+  .sidebar {
+    background-color: #2A2A2A;
+  }
+  .sidebar a {
+    color: #BEBEBE;
+  }
+  a {
+    color: #BEBEBE;
+  }
 }
 
 header {
   display: flex;
+  justify-content: space-between;
 }
 
 .sidebar {
@@ -59,9 +78,10 @@ header {
 
 .switch {
   position: relative;
-  display: inline-block;
   width: 60px;
   height: 34px;
+  display: flex;
+  flex-direction: column;
 }
 
 .switch input {
@@ -92,12 +112,9 @@ header {
   bottom: 4px;
   border-radius: 50%;
   background-color: white;
+  border: 1px solid grey;
   -webkit-transition: .4s;
   transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
 }
 
 input:focus + .slider {
@@ -110,3 +127,6 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
+#light-mode-text {
+  margin-top: 40px;
+}
