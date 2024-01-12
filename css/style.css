@@ -216,3 +216,46 @@ main {
 legend {
   float: left;
 }
+
+#semantic-html-page {
+  display: flex;
+  flex-direction: row;justify-content: center;
+}
+
+#semantic-html-question {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.semantic-question-image {
+  margin-top: 10px;
+  width: 300px;
+}
+
+#exercise-title {
+  text-align: center;
+}
+
+#semantic-text-content {
+  max-width: 380px;
+}
+
+.semantic-radio-button {
+  margin-right: 5px;
+}
+
+.semantic-option-div {
+  display: flex;
+}
+
+#semantic-legend {
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+#semantic-answer-button {
+  width: fit-content;
+  padding: 5px;
+}

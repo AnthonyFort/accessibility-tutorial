@@ -36,8 +36,35 @@
       </fieldset>
     </div>
   </header>
-  <main>
-    <h1>Semantic HTML</h1>
+  <main id="semantic-html-page">
+    <section>
+    <div class="text-content" id="semantic-text-content">
+      <h2>Semantic HTML</h2>
+      <p>Users who are blind or partially sighted may rely on a “screen reader” to describe the elements on the page.</p>
+      <p>Writing semantic HTML means usings elements with descriptive names, non-generic names. This makes the screen reader’s descriptions more vivid for the user.</p>
+    </div>
+  </section>
+  <section>
+    <h3 id="exercise-title">Exercise</h3>
+    <form >
+      <fieldset id="semantic-html-question">
+        <legend id="semantic-legend">Which example uses semantic HTML?</legend> 
+        <div class="semantic-option-div">
+          <input type="radio" id="option1" name="semanticChoice" value="nav" class="semantic-radio-button">
+          <label for="option1" class="semantic-question-options">
+            <img src="../images/semantic-correct.png" alt="Code snippet of a nav element" class="semantic-question-image">
+          </label>
+        </div>       
+        <div class="semantic-option-div">
+          <input type="radio" id="option2" name="semanticChoice" value="div">
+          <label for="option2" class="semantic-question-options">
+            <img src="../images/semantic-incorrect.png" alt="Code snippet of a div element" class="semantic-question-image">
+          </label>
+        </div>   
+        <button type="submit" id="semantic-answer-button">Show answer</button>
+      </fieldset>
+    </form>
+  </section>
   </main>
   <footer>
     <a id="next-button" href="keyboard-nav.html">Previous</a>

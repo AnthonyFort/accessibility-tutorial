@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const increaseButton = document.getElementById('increase-button')
   const decreaseButton = document.getElementById('decrease-button')
   const documentBody = document.getElementsByTagName('body')
+  const semanticAnswerButton = document.getElementById('semantic-answer-button')
 
   let isSidebarOpen = false
   let lightModeOn = true
