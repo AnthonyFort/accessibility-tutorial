@@ -15,6 +15,11 @@ body {
     cursor: pointer;
     position: absolute; 
   }
+
+  #tutorial-title {
+    text-align: center;
+  }
+
   .sidebar {
     background-color: #2A2A2A;
   }
@@ -137,4 +142,16 @@ input:checked + .slider:before {
 
 footer {
   text-align: right;
+}
+
+#intro-image {
+  width: 100px;
+}
+
+#intro-content {
+  display: flex;
+}
+
+.text-content {
+  max-width: 400px;
 }
