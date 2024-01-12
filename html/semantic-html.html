@@ -41,27 +41,36 @@
     <div class="text-content" id="semantic-text-content">
       <h2>Semantic HTML</h2>
       <p>Users who are blind or partially sighted may rely on a “screen reader” to describe the elements on the page.</p>
-      <p>Writing semantic HTML means usings elements with descriptive names, non-generic names. This makes the screen reader’s descriptions more vivid for the user.</p>
+      <p>Help make the screen reader's description as vivid as possible by using "semantic HTML," that is, HTML elements with descriptive, non-generic names.</p>
     </div>
   </section>
   <section>
     <h3 id="exercise-title">Exercise</h3>
     <form >
       <fieldset id="semantic-html-question">
-        <legend id="semantic-legend">Which example uses semantic HTML?</legend> 
-        <div class="semantic-option-div">
-          <input type="radio" id="option1" name="semanticChoice" value="nav" class="semantic-radio-button">
+        <legend id="semantic-legend">Which code snippet uses semantic HTML?</legend> 
+        <div>
+          <h4 class="semantic-option-header">Option 1</h4>
+          <div class="semantic-option-div">
+          <input type="radio" id="option1" name="semanticChoice" value="option1" class="semantic-radio-button">
           <label for="option1" class="semantic-question-options">
             <img src="../images/semantic-correct.png" alt="Code snippet of a nav element" class="semantic-question-image">
           </label>
+        </div>
         </div>       
-        <div class="semantic-option-div">
-          <input type="radio" id="option2" name="semanticChoice" value="div">
+        <div>
+          <h4 class="semantic-option-header">Option 2</h4>
+          <div class="semantic-option-div">
+          <input type="radio" id="option2" name="semanticChoice" value="option2" class="semantic-radio-button">
           <label for="option2" class="semantic-question-options">
             <img src="../images/semantic-incorrect.png" alt="Code snippet of a div element" class="semantic-question-image">
           </label>
+        </div>
         </div>   
         <button type="submit" id="semantic-answer-button">Show answer</button>
+        <div id="semantic-answer">
+          <p id="semantic-answer-text"></p>
+        </div>
       </fieldset>
     </form>
   </section>

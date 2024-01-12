@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const decreaseButton = document.getElementById('decrease-button')
   const documentBody = document.getElementsByTagName('body')
   const semanticAnswerButton = document.getElementById('semantic-answer-button')
+  const semanticAnswerDiv = document.getElementById('semantic-answer')
+  const semanticAnswertext = document.getElementById('semantic-answer-text')
 
   let isSidebarOpen = false
   let lightModeOn = true
@@ -98,4 +100,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   })
 
+  semanticAnswerButton.addEventListener('click', function(e){
+    e.preventDefault()
+    const semanticChoice = document.querySelector('input[name="semanticChoice"]:checked')
+    if (semanticChoice.value === 'option1') {
+      semanticAnswertext.innerHTML = 'Correct! Option 1 uses semantic HTML.'
+      semanticAnswerDiv.style.display = 'block'
+    } else if (semanticChoice.value === 'option2') {
+      semanticAnswertext.innerHTML = 'Incorrect. Div elements are not considered semantic.'
+      semanticAnswerDiv.style.display = 'block'
+    } 
+  })
 })
