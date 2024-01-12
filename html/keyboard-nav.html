@@ -7,11 +7,52 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-  <header id="header">
+  <header>
+    <button aria-label="Menu" aria-controls="navigation" aria-expanded="false" id="sidebar-open-button">☰</button>
+    <nav role="navigation" aria-expanded="false" class="sidebar">
+      <button id="sidebar-close-button" >X</button>
+      <ul>
+        <li><a href="index.html" tabindex="-1" class="sidebar-item">Introduction</a></li>
+        <li><a href="colour.html" tabindex="-1" class="sidebar-item">Colour</a></li>
+        <li><a href="font-size.html" tabindex="-1" class="sidebar-item">Font Size</a></li>
+        <li><a href="keyboard-nav.html" tabindex="-1" class="sidebar-item">Keyboard Navigation</a></li>
+        <li><a href="semantic-html.html" tabindex="-1" class="sidebar-item">Semantic HTML</a></li>
+        <li><a href="aria.html" tabindex="-1" class="sidebar-item">ARIA</a></li>
+        <li><a href="references.html" tabindex="-1" class="sidebar-item">References</a></li>
+      </ul>
+    </nav>
+    <div>
+      <div id="dark-mode-div">
+        <span id="light-mode-text">Select dark mode</span>
+        <label class="switch" id="light-mode-switch">
+          <input type="checkbox" aria-label="Toggle dark and light mode">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <fieldset id="font-size-button-div">
+        <legend id="change-font-size-text">Change font size</legend>
+        <button type="button" class="font-size-button" aria-label="Increase font size">+</button>
+        <button type="button" class="font-size-button" aria-label="Decrease font size">-</button>
+      </fieldset>
+    </div>
   </header>
   <main>
-    <h1>Keyboard Navigation</h1>
+    <section>
+      <div class="text-content">
+        <h2>Keyboard Navigation</h2>
+        <p>Some users cannot use a mouse because of difficulties seeing the cursor. Using “Semantic HTML” (see next topic) helps make your website navigable from the keyboard.</p>
+      </div>
+      <div class="text-content">
+        <h3>Exercise</h3>
+        <p>Use the “Tab” and “Enter” keys to navigate to the next slide.
+          (For sighted users, pay attention to which item is highlighted.)</p>
+      </div>
+    </section>
   </main>
+  <footer>
+    <a id="next-button" href="font-size.html">Previous</a>
+    <a id="next-button" href="semantic-html.html">Next</a>
+  </footer>
   <script src="../javascript/script.js"></script>
 </body>
 </html>

@@ -66,7 +66,9 @@ document.addEventListener('DOMContentLoaded', function() {
       const currentLocation = window.location.href
       const filename = currentLocation.match(/[^/]*$/)
       const index = pageList.indexOf(filename[0])
-      window.location.href = `../html/${pageList[index + 1]}`
+      if (index + 1 < pageList.length) {
+        window.location.href = `../html/${pageList[index + 1]}`
+      }   
     }
   })
 })
