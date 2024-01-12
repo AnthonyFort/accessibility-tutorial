@@ -6,9 +6,21 @@ document.addEventListener('DOMContentLoaded', function() {
   const siderbarItems = document.getElementsByClassName('sidebar-item')
   const lightModeSwitchButton = document.getElementById('light-mode-switch')
   const lightModeText = document.getElementById('light-mode-text')
+  const nextButton = document.getElementById('next-button')
+
 
   let isSidebarOpen = false
   let lightModeOn = true
+
+  const pageList = [
+    'index.html',
+    'colour.html',
+    'font-size.html',
+    'keyboard-nav.html',
+    'semantic-html.html',
+    'aria.html',
+    'references.html'
+  ]
 
   sidebarOpenButton.addEventListener('click', function(e) {
     e.stopPropagation()
@@ -48,6 +60,15 @@ document.addEventListener('DOMContentLoaded', function() {
         lightModeText.innerText = 'Select light mode'
         lightModeOn = true
       }
+    }
+  })
+
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'n' || e.key === 'N') {
+      const currentLocation = window.location.href
+      const filename = currentLocation.match(/[^/]*$/)
+      const index = pageList.indexOf(filename[0])
+      window.location.href = `../html/${pageList[index + 1]}`
     }
   })
 

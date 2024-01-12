@@ -134,3 +134,7 @@ input:checked + .slider:before {
 #light-mode-text {
   margin-top: 40px;
 }
+
+footer {
+  text-align: right;
+}
