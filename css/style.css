@@ -1,0 +1,52 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #F8F8F8;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  left: -300px;
+  background-color: #BFBFBF;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  transition: left 0.3s;
+}
+
+.sidebar a {
+  display: block;
+  color: #242424;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+.sidebar button {
+  background: none;
+  border: none;
+  color: #242424;
+  padding: 12px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+
+
+
+
+#header button {
+  background: none;
+  border: none;
+  color: #242424; 
+  padding: 12px;
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute; 
+}
+
