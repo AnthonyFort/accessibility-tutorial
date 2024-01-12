@@ -62,13 +62,18 @@ document.addEventListener('DOMContentLoaded', function() {
   })
 
   document.addEventListener('keydown', function(e){
+    const currentLocation = window.location.href
+    const filename = currentLocation.match(/[^/]*$/)
+    const index = pageList.indexOf(filename[0])
     if (e.key === 'n' || e.key === 'N') {
-      const currentLocation = window.location.href
-      const filename = currentLocation.match(/[^/]*$/)
-      const index = pageList.indexOf(filename[0])
       if (index + 1 < pageList.length) {
         window.location.href = `../html/${pageList[index + 1]}`
       }   
+    }
+    if (e.key === 'p' || e.key === 'P') {
+      if (index > 0) {
+        window.location.href = `../html/${pageList[index - 1]}`
+      }
     }
   })
 })
