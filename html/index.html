@@ -11,20 +11,20 @@
 </head>
 <body>
   <header id="header">
-    <!-- <a href="#main" class="skip-to-main-content-link">Skip to main content</a> -->
-  <button aria-label="Menu" aria-controls="navigation" aria-expanded="false" id="sidebar-open-button">☰</button>
-  <nav role="navigation" aria-expanded="false" class="sidebar">
-    <button id="sidebar-close-button" >X</button>
-  <ul>
-    <li><a href="index.html">Introduction</a></li>
-    <li><a href="colour.html">Colour</a></li>
-    <li><a href="font-size.html">Font Size</a></li>
-    <li><a href="keyboard-nav.html">Keyboard Navigation</a></li>
-    <li><a href="semantic-html.html">Semantic HTML</a></li>
-    <li><a href="aria.html">ARIA</a></li>
-    <li><a href="references.html">References</a></li>
-  </ul>
-</nav>
+    <a href="#main" class="skip-to-main-content-link" id="skip-button">Skip to content</a>
+    <button aria-label="Menu" aria-controls="navigation" aria-expanded="false" id="sidebar-open-button">☰</button>
+    <nav role="navigation" aria-expanded="false" class="sidebar">
+      <button id="sidebar-close-button" >X</button>
+    <ul>
+      <li><a href="index.html" tabindex="-1" class="sidebar-item">Introduction</a></li>
+      <li><a href="colour.html" tabindex="-1" class="sidebar-item">Colour</a></li>
+      <li><a href="font-size.html" tabindex="-1" class="sidebar-item">Font Size</a></li>
+      <li><a href="keyboard-nav.html" tabindex="-1" class="sidebar-item">Keyboard Navigation</a></li>
+      <li><a href="semantic-html.html" tabindex="-1" class="sidebar-item">Semantic HTML</a></li>
+      <li><a href="aria.html" tabindex="-1" class="sidebar-item">ARIA</a></li>
+      <li><a href="references.html" tabindex="-1" class="sidebar-item">References</a></li>
+    </ul>
+  </nav>
     <!-- <label class="light-mode-switch">
       <input type="checkbox">
       <span class="slider round"></span>

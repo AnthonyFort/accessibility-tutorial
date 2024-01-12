@@ -3,6 +3,14 @@ body {
   background-color: #F8F8F8;
 }
 
+#skip-link {
+
+}
+
+header {
+  display: flex;
+}
+
 .sidebar {
   position: relative;
   margin: 0;
