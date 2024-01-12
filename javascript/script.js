@@ -95,6 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (currentFontSizeIndex < fontSizesInRem.length - 1){
       currentFontSizeIndex++
       documentBody[0].style.fontSize = `${fontSizesInRem[currentFontSizeIndex]}rem`
+      savePreferences()
     } 
   })
 
@@ -102,6 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (currentFontSizeIndex > 0) {
       currentFontSizeIndex--
       documentBody[0].style.fontSize = `${fontSizesInRem[currentFontSizeIndex]}rem`
+      savePreferences()
     }
   })
 
@@ -136,6 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function savePreferences() {
     localStorage.setItem('lightModeOn', lightModeOn.toString())
+    localStorage.setItem('fontSizeIndex', currentFontSizeIndex)
   }
 
   function loadPreferences() {
@@ -151,6 +154,9 @@ document.addEventListener('DOMContentLoaded', function() {
       lightModeText.innerText = 'Select light mode'
       lightModeSwitchButton.querySelector('input').checked = true
     }
+    const storedFontSizeIndex = parseInt(localStorage.getItem('fontSizeIndex'), 10)
+    currentFontSizeIndex = storedFontSizeIndex
+    documentBody[0].style.fontSize = `${fontSizesInRem[currentFontSizeIndex]}rem`
   }
   
   
