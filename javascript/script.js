@@ -4,8 +4,10 @@ document.addEventListener('DOMContentLoaded', function() {
   const sidebarOpenButton = document.getElementById('sidebar-open-button')
   const sidebarCloseButton = document.getElementById('sidebar-close-button')
   const siderbarItems = document.getElementsByClassName('sidebar-item')
+  const lightModeSwitchButton = document.getElementById('light-mode-switch')
 
   let isSidebarOpen = false
+  let lightModeOn = true
 
   sidebarOpenButton.addEventListener('click', function(e) {
     e.stopPropagation()
@@ -34,5 +36,14 @@ document.addEventListener('DOMContentLoaded', function() {
       isSidebarOpen = false
     } 
   }
+
+  lightModeSwitchButton.addEventListener('click', function(e){
+    if (e.target === lightModeSwitchButton.querySelector('input')) {
+      document.body.classList.toggle('dark-mode')
+    }
+  })
+
+
+  
 
 })
