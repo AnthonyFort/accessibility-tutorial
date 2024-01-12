@@ -6,9 +6,13 @@ document.addEventListener('DOMContentLoaded', function() {
   const siderbarItems = document.getElementsByClassName('sidebar-item')
   const lightModeSwitchButton = document.getElementById('light-mode-switch')
   const lightModeText = document.getElementById('light-mode-text')
+  const increaseButton = document.getElementById('increase-button')
+  const decreaseButton = document.getElementById('decrease-button')
+  const documentBody = document.getElementsByTagName('body')
 
   let isSidebarOpen = false
   let lightModeOn = true
+  let currentFontSizeIndex = 0
 
   const pageList = [
     'index.html',
@@ -19,6 +23,8 @@ document.addEventListener('DOMContentLoaded', function() {
     'aria.html',
     'references.html'
   ]
+
+  const fontSizesInRem = [1, 1.125, 1.25, 1.375, 1.5]
 
   sidebarOpenButton.addEventListener('click', function(e) {
     e.stopPropagation()
@@ -76,4 +82,19 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   })
+
+  increaseButton.addEventListener('click', function(){
+    if (currentFontSizeIndex < fontSizesInRem.length - 1){
+      currentFontSizeIndex++
+      documentBody[0].style.fontSize = `${fontSizesInRem[currentFontSizeIndex]}rem`
+    } 
+  })
+
+  decreaseButton.addEventListener('click', function(){
+    if (currentFontSizeIndex > 0) {
+      currentFontSizeIndex--
+      documentBody[0].style.fontSize = `${fontSizesInRem[currentFontSizeIndex]}rem`
+    }
+  })
+
 })
