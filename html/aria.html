@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ARIA</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
   <header>
     <button aria-label="Menu" aria-controls="navigation" aria-expanded="false" id="sidebar-open-button">☰</button>
     <nav role="navigation" aria-expanded="false" class="sidebar">
-      <button id="sidebar-close-button" >X</button>
+      <button id="sidebar-close-button">X</button>
       <ul>
         <li><a href="index.html" tabindex="-1" class="sidebar-item">Introduction</a></li>
         <li><a href="colour.html" tabindex="-1" class="sidebar-item">Colour</a></li>
@@ -36,13 +38,32 @@
       </fieldset>
     </div>
   </header>
-  <main>
-    <h1>ARIA</h1>
-  </main>
-  <footer>
-    <a id="next-button" href="semantic-html.html">Previous</a>
-    <a id="next-button" href="references.html">Next</a>
-  </footer>
-  <script src="../javascript/script.js"></script>
+  <main id="semantic-html-page">
+    <section>
+      <div class="text-content" id="semantic-text-content">
+        <h2>ARIA</h2>
+        <p>When semantic HTML is not descriptive enough, use ARIA labels and roles.</p>
+        <p>Consider the “hamburger menu” in the top left corner of the screen. For icons with no accompanying text, add
+          an “aria-label” to the HTML element, describing what functionality the icon stands for.</p>
+      </div>
+    </section>
+    <section aria-labelledby="aria-exercise-description" id="aria-exercise">
+      <h3 id="exercise-title">Exercise</h3>
+      <p id="aria-exercise-description">Write an aria-label describing the functionality of the hamburger menu.</p>
+      <h4>Your answer:</h4>
+      <label for="user-answer" class="visually-hidden">aria-label=</label>
+      <input type="text" id="user-answer" name="user-answer" aria-label="Your answer">
+      <button type="button" id="aria-answer-button">Show sample answer</button>
+      <div id="sample-aria-answer">
+        <p><strong>Sample answer:</strong> aria-label="Navigation menu"</p>
+      </div>
+    </section>
+    </main>
+    <footer>
+      <a id="next-button" href="semantic-html.html">Previous</a>
+      <a id="next-button" href="references.html">Next</a>
+    </footer>
+    <script src="../javascript/script.js"></script>
 </body>
+
 </html>

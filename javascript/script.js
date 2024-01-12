@@ -12,10 +12,13 @@ document.addEventListener('DOMContentLoaded', function() {
   const semanticAnswerButton = document.getElementById('semantic-answer-button')
   const semanticAnswerDiv = document.getElementById('semantic-answer')
   const semanticAnswertext = document.getElementById('semantic-answer-text')
+  const ariaAnswerButton = document.getElementById('aria-answer-button')
+  const sampleAriaAnswer = document.getElementById('sample-aria-answer')
 
   let isSidebarOpen = false
   let lightModeOn = true
   let currentFontSizeIndex = 0
+  let ariaAnswerVisible = false
 
   const pageList = [
     'index.html',
@@ -100,15 +103,33 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   })
 
-  semanticAnswerButton.addEventListener('click', function(e){
-    e.preventDefault()
-    const semanticChoice = document.querySelector('input[name="semanticChoice"]:checked')
-    if (semanticChoice.value === 'option1') {
-      semanticAnswertext.innerHTML = 'Correct! Option 1 uses semantic HTML.'
-      semanticAnswerDiv.style.display = 'block'
-    } else if (semanticChoice.value === 'option2') {
-      semanticAnswertext.innerHTML = 'Incorrect. Div elements are not considered semantic.'
-      semanticAnswerDiv.style.display = 'block'
-    } 
-  })
+  if (semanticAnswerButton) {
+    semanticAnswerButton.addEventListener('click', function(e){
+      e.preventDefault()
+      const semanticChoice = document.querySelector('input[name="semanticChoice"]:checked')
+      if (semanticChoice.value === 'option1') {
+        semanticAnswertext.innerHTML = 'Correct! Option 1 uses semantic HTML.'
+        semanticAnswerDiv.style.display = 'block'
+      } else if (semanticChoice.value === 'option2') {
+        semanticAnswertext.innerHTML = 'Incorrect. Div elements are not considered semantic.'
+        semanticAnswerDiv.style.display = 'block'
+      } 
+    })
+  }
+  
+
+  if (ariaAnswerButton) {
+    ariaAnswerButton.addEventListener('click', function(){
+      if (ariaAnswerVisible === false) {
+        sampleAriaAnswer.style.display = 'block'
+        ariaAnswerButton.innerText = 'Hide sample answer'
+        ariaAnswerVisible = true
+      } else if (ariaAnswerVisible === true) {
+        sampleAriaAnswer.style.display = 'none'
+        ariaAnswerButton.innerText = 'Show sample answer'
+        ariaAnswerVisible = false
+      }
+    })
+  }
+  
 })

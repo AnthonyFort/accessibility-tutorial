@@ -269,3 +269,19 @@ legend {
 #semantic-answer {
   display: none;
 }
+
+#sample-aria-answer {
+  display: none;
+}
+
+#aria-exercise {
+  border: 1px solid #333333;
+  padding: 10px;
+  max-width: 370px;
+}
+
+#aria-answer-button {
+  margin-top: 12px;
+  width: fit-content;
+  padding: 5px;
+}
