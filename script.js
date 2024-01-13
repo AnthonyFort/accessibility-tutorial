@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // This function saves user preferences in local storage.
   function savePreferences() {
     localStorage.setItem('lightModeOn', lightModeOn.toString())
-    localStorage.setItem('fontSizeIndex', currentFontSizeIndex)
+    localStorage.setItem('fontSizeIndex', currentFontSizeIndex.toString())
   }
 
   // This function loads user preferences from storage and is called on each page render.
