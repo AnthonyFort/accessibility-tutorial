@@ -36,8 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const fontSizesInRem = [1, 1.125, 1.25, 1.375, 1.5]
 
-
-
   sidebarOpenButton.addEventListener('click', function(e) {
     e.stopPropagation()
     this.setAttribute('aria-expanded', 'true')

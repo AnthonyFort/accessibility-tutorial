@@ -5,6 +5,14 @@ body {
   color: #333333;
 }
 
+h1 {
+  margin-bottom: 0.4rem;
+}
+
+h2 {
+  margin-bottom: 0.4 rem;
+}
+
 .dark-mode {
   background-color: #1F1F1F;
   color: #F8F8F8;
@@ -196,7 +204,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 #light-mode-text {
