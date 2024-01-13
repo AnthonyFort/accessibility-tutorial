@@ -10,7 +10,8 @@ h1 {
 }
 
 h2 {
-  margin-bottom: 0.4 rem;
+  margin-bottom: 5px;
+  margin-top: 0;
 }
 
 .dark-mode {
@@ -350,4 +351,16 @@ legend {
 
 #colour-exercise {
   max-height: 430px;
+}
+
+.links-headings {
+  padding: 5px;
+}
+
+#links-title {
+  margin-bottom: 0;
+}
+
+#links-list {
+  margin-top: 5px;
 }

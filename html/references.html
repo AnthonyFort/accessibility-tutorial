@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Useful Links</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
   <header>
     <button aria-label="Menu" aria-controls="navigation" aria-expanded="false" id="sidebar-open-button">☰</button>
     <nav aria-expanded="false" class="sidebar">
-      <button id="sidebar-close-button" >X</button>
+      <button id="sidebar-close-button">X</button>
       <ul>
         <li><a href="index.html" tabindex="-1" class="sidebar-item">Introduction</a></li>
         <li><a href="colour.html" tabindex="-1" class="sidebar-item">Colour</a></li>
@@ -37,31 +39,38 @@
     </div>
   </header>
   <main>
-    <h2>Useful Links</h2>
-    <ul>
-      <li>Colour</li>
-      <ol>
-        <li><a href="https://webaim.org/projects/lowvisionsurvey2/">Survey of users with low vision</a></li>
-        <li><a href="https://webaim.org/resources/contrastchecker/">Free online contrast checker</a></li>
-      </ol>  
-      <li>Font Size</li>
-      <ol>
-        <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html">Explanation of rationale for text resizing feature</a></li>
-        <li><a href="https://webaim.org/projects/steppingstones/cognitiveresearch">Article including summary of font-size research findings</a></li>
-      </ol>
-      <li>Keyboard Navigation</li>
-      <ol>
-        <li><a href="https://webaim.org/techniques/keyboard/">Summary of keyboard accessibility topics</a></li>
-      </ol>
-      <li>Semantic HTML</li>
-      <ol>
-        <li><a href="https://www.w3schools.com/html/html5_semantic_elements.asp">Summary of semantic HTML</a></li>
-        <li><a href="https://webaim.org/resources/htmlcheatsheet/">Semantic HTML cheat sheet</a></li>
-      </ol>
-      <li>ARIA</li>
-      <ol>
-        <li><a href="https://webaim.org/techniques/aria/">Introductory article to ARIA</a></li>
-      </ol>
+    <h2 id="links-title">Useful Links</h2>
+    <ul id="links-list">
+      <li class="links-headings">Colour
+        <ol>
+          <li><a href="https://webaim.org/projects/lowvisionsurvey2/">Survey of users with low vision</a></li>
+          <li><a href="https://webaim.org/resources/contrastchecker/">Free online contrast checker</a></li>
+        </ol>
+      </li>
+      <li class="links-headings">Font Size
+        <ol>
+          <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html">Explanation of rationale for text
+              resizing feature</a></li>
+          <li><a href="https://webaim.org/projects/steppingstones/cognitiveresearch">Article including summary of
+              font-size research findings</a></li>
+        </ol>
+      </li>
+      <li class="links-headings">Keyboard Navigation
+        <ol>
+          <li><a href="https://webaim.org/techniques/keyboard/">Summary of keyboard accessibility topics</a></li>
+        </ol>
+      </li>
+      <li class="links-headings">Semantic HTML
+        <ol>
+          <li><a href="https://www.w3schools.com/html/html5_semantic_elements.asp">Summary of semantic HTML</a></li>
+          <li><a href="https://webaim.org/resources/htmlcheatsheet/">Semantic HTML cheat sheet</a></li>
+        </ol>
+      </li>
+      <li class="links-headings">ARIA
+        <ol>
+          <li><a href="https://webaim.org/techniques/aria/">Introductory article to ARIA</a></li>
+        </ol>
+      </li>
     </ul>
   </main>
   <footer>
@@ -70,4 +79,5 @@
   </footer>
   <script src="../javascript/script.js"></script>
 </body>
+
 </html>
