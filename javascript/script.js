@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+  // HTML imports
   const sidebar = document.querySelector('.sidebar')
   const sidebarOpenButton = document.getElementById('sidebar-open-button')
   const sidebarCloseButton = document.getElementById('sidebar-close-button')
@@ -15,11 +16,14 @@ document.addEventListener('DOMContentLoaded', function() {
   const ariaAnswerButton = document.getElementById('aria-answer-button')
   const sampleAriaAnswer = document.getElementById('sample-aria-answer')
   
+  // Variables for monitoring state change
   let isSidebarOpen = false
   let lightModeOn = true
   let currentFontSizeIndex = 0
   let ariaAnswerVisible = false
+  const fontSizesInRem = [1, 1.125, 1.25, 1.375, 1.5]
 
+  // Variables for tracking current location and updating state accordingly
   const fileList = [
     'index.html',
     'colour.html',
@@ -34,8 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const filename = currentLocation.match(/[^/]*$/)
   const pageIndex = fileList.indexOf(filename[0])
 
-  const fontSizesInRem = [1, 1.125, 1.25, 1.375, 1.5]
-
+  // This function opens the sidebar.
   sidebarOpenButton.addEventListener('click', function(e) {
     e.stopPropagation()
     this.setAttribute('aria-expanded', 'true')
@@ -45,6 +48,8 @@ document.addEventListener('DOMContentLoaded', function() {
     isSidebarOpen = true
   })
 
+  // This function closes the sidebar.
+  // It also ensures that, once closed, keyboard users cannot access the sidebar items.
   sidebarCloseButton.addEventListener('click', function(e){
     e.stopPropagation()
     this.setAttribute('aria-expanded', 'false')
@@ -54,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
     isSidebarOpen = false
   })
 
+  // This function allows users to close the sidebar by simply clicking elsewhere on the screen.
   document.onclick = function(e) {
     if (isSidebarOpen === true) {
       sidebarOpenButton.setAttribute('aria-expanded', 'false')
@@ -64,6 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } 
   }
 
+  // This function toggles the light mode and saves the user's preference to local storage.
   lightModeSwitchButton.addEventListener('click', function(e) {
     if (e.target === lightModeSwitchButton.querySelector('input')) {
       lightModeOn = !lightModeOn
@@ -78,6 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   })
 
+  // This function allows users to skip to adjacent pages with a single key press.
   document.addEventListener('keydown', function(e){
     if (e.key === 'm' || e.key === 'M') {
       if (pageIndex + 1 < fileList.length) {
@@ -91,6 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   })
 
+  // The next two functions control the font size and save the user's preference to local storage.
   increaseButton.addEventListener('click', function(){
     if (currentFontSizeIndex < fontSizesInRem.length - 1){
       currentFontSizeIndex++
@@ -107,6 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   })
 
+  // This function reveals the answer to the semantic HTML question.
   if (semanticAnswerButton) {
     semanticAnswerButton.addEventListener('click', function(e){
       e.preventDefault()
@@ -121,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })
   }
   
-
+  // This function reveals the answer to the ARIA question.
   if (ariaAnswerButton) {
     ariaAnswerButton.addEventListener('click', function(){
       if (ariaAnswerVisible === false) {
@@ -136,11 +146,13 @@ document.addEventListener('DOMContentLoaded', function() {
     })
   }
 
+  // This function saves user preferences in local storage.
   function savePreferences() {
     localStorage.setItem('lightModeOn', lightModeOn.toString())
     localStorage.setItem('fontSizeIndex', currentFontSizeIndex)
   }
 
+  // This function loads user preferences from storage and is called on each page render.
   function loadPreferences() {
     const savedLightPreference = localStorage.getItem('lightModeOn')
     if (savedLightPreference === 'true') {
