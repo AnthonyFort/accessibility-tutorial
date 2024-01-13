@@ -89,12 +89,12 @@ document.addEventListener('DOMContentLoaded', function() {
   document.addEventListener('keydown', function(e){
     if (e.key === 'm' || e.key === 'M') {
       if (pageIndex + 1 < fileList.length) {
-        window.location.href = `../html/${fileList[pageIndex + 1]}`
+        window.location.href = `${fileList[pageIndex + 1]}`
       }   
     }
     if (e.key === 'n' || e.key === 'N') {
       if (pageIndex > 0) {
-        window.location.href = `../html/${fileList[pageIndex - 1]}`
+        window.location.href = `${fileList[pageIndex - 1]}`
       }
     }
   })

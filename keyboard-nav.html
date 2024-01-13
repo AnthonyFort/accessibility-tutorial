@@ -4,12 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ARIA</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <title>Keyboard Navigation</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
   <!-- The header contains a nav menu, light/dark mode toggle, and font-size adjuster. -->
   <header>
     <button aria-label="Menu" aria-controls="navigation" aria-expanded="false" id="sidebar-open-button">☰</button>
@@ -42,36 +41,35 @@
   </header>
 
   <!-- Main section contains an explanation and an exercise. -->
-  <main id="semantic-html-page">
-    <section>
-      <div class="text-content" id="semantic-text-content">
-        <h2>ARIA</h2>
+  <main>
+    <section id="intro-content">
+      <div class="text-content">
+        <h2>Keyboard Navigation</h2>
         <h3>Issue</h3>
-        <p>Sometimes, semantic HTML is not descriptive enough. For instance, there is not a native HTML element to describe the icon in the top left of the screen.</p>
-        <h3>Solution</h3>
-        <p>Add ARIA-labels or roles to provide further context.</p>
-      </div>
+        <p>For various reasons, some users cannot use a mouse.</p>
+          <h3>Solution</h3>
+          <p>Ensure all features on the page can be accessed via keyboard commands.</p>
+        </div>
+          <div class="text-content exercise" aria-labelledby="exercise-heading">
+          <h3 id="exercise-heading">Exercise</h3>
+          <p>Use the “Tab” key to highlight the Light Mode toggle. Then press spacebar to toggle between light modes.</p>
+            <div class="svg-div">
+              <svg aria-hidden="true" id="keyboard-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path
+                  d="M18.6 4H1.4C.629 4 0 4.629 0 5.4v9.2c0 .769.629 1.4 1.399 1.4h17.2c.77 0 1.4-.631 1.4-1.4V5.4C20 4.629 19.369 4 18.6 4zM11 6h2v2h-2V6zm3 3v2h-2V9h2zM8 6h2v2H8V6zm3 3v2H9V9h2zM5 6h2v2H5V6zm3 3v2H6V9h2zM2 6h2v2H2V6zm3 3v2H3V9h2zm-1 5H2v-2h2v2zm11 0H5v-2h10v2zm3 0h-2v-2h2v2zm-3-3V9h2v2h-2zm3-3h-4V6h4v2z" />
+              </svg>
+            </div>
+        </div>
     </section>
-    <section aria-labelledby="exercise-title" id="aria-exercise">
-      <h3 id="exercise-title">Exercise</h3>
-      <p id="aria-exercise-description">Write an aria-label describing the functionality of the navigation menu icon in the top left corner.</p>
-      <h4>Your answer:</h4>
-      <label for="user-answer" class="visually-hidden">aria-label=</label>
-      <input type="text" id="user-answer" name="user-answer" aria-label="Your answer">
-      <button type="button" id="aria-answer-button">Show sample answer</button>
-      <div id="sample-aria-answer">
-        <p><strong>Sample answer:</strong> aria-label="Navigation menu"</p>
-      </div>
-    </section>
-    </main>
+  </main>
 
-    <!-- The footer allows users to navigate to adjacent pages -->
-    <footer>
-      <p>Press "n" to go back or "m" to go continue.</p>
-      <a class="navigation-button" href="semantic-html.html">Back to Semantic HTML</a>
-      <a class="navigation-button" href="references.html">Forward to Useful Links</a>
-    </footer>
-    <script src="../javascript/script.js"></script>
+  <!-- The footer allows users to navigate to adjacent pages -->
+  <footer>
+    <p>Press "n" to go back or "m" to go continue.</p>
+    <a class="navigation-button" href="font-size.html">Back to Font Size</a>
+    <a class="navigation-button" href="semantic-html.html">Forward to Semantic HTML</a>
+  </footer>
+  <script src="script.js"></script>
 </body>
 
 </html>

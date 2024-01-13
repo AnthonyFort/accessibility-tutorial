@@ -4,11 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Useful Links</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <title>ARIA</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
   <!-- The header contains a nav menu, light/dark mode toggle, and font-size adjuster. -->
   <header>
     <button aria-label="Menu" aria-controls="navigation" aria-expanded="false" id="sidebar-open-button">☰</button>
@@ -40,49 +41,37 @@
     </div>
   </header>
 
-  <!-- The main section comprises a nested list of useful links. -->
-  <main>
-    <h2 id="links-title">Useful Links</h2>
-    <ul id="links-list">
-      <li class="links-headings">Colour
-        <ol>
-          <li><a href="https://webaim.org/projects/lowvisionsurvey2/">Survey of users with low vision</a></li>
-          <li><a href="https://webaim.org/resources/contrastchecker/">Free online contrast checker</a></li>
-        </ol>
-      </li>
-      <li class="links-headings">Font Size
-        <ol>
-          <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html">Explanation of rationale for text
-              resizing feature</a></li>
-          <li><a href="https://webaim.org/projects/steppingstones/cognitiveresearch">Article including summary of
-              font-size research findings</a></li>
-        </ol>
-      </li>
-      <li class="links-headings">Keyboard Navigation
-        <ol>
-          <li><a href="https://webaim.org/techniques/keyboard/">Summary of keyboard accessibility topics</a></li>
-        </ol>
-      </li>
-      <li class="links-headings">Semantic HTML
-        <ol>
-          <li><a href="https://www.w3schools.com/html/html5_semantic_elements.asp">Summary of semantic HTML</a></li>
-          <li><a href="https://webaim.org/resources/htmlcheatsheet/">Semantic HTML cheat sheet</a></li>
-        </ol>
-      </li>
-      <li class="links-headings">ARIA
-        <ol>
-          <li><a href="https://webaim.org/techniques/aria/">Introductory article to ARIA</a></li>
-        </ol>
-      </li>
-    </ul>
-  </main>
+  <!-- Main section contains an explanation and an exercise. -->
+  <main id="semantic-html-page">
+    <section>
+      <div class="text-content" id="semantic-text-content">
+        <h2>ARIA</h2>
+        <h3>Issue</h3>
+        <p>Sometimes, semantic HTML is not descriptive enough. For instance, there is not a native HTML element to describe the icon in the top left of the screen.</p>
+        <h3>Solution</h3>
+        <p>Add ARIA-labels or roles to provide further context.</p>
+      </div>
+    </section>
+    <section aria-labelledby="exercise-title" id="aria-exercise">
+      <h3 id="exercise-title">Exercise</h3>
+      <p id="aria-exercise-description">Write an aria-label describing the functionality of the navigation menu icon in the top left corner.</p>
+      <h4>Your answer:</h4>
+      <label for="user-answer" class="visually-hidden">aria-label=</label>
+      <input type="text" id="user-answer" name="user-answer" aria-label="Your answer">
+      <button type="button" id="aria-answer-button">Show sample answer</button>
+      <div id="sample-aria-answer">
+        <p><strong>Sample answer:</strong> aria-label="Navigation menu"</p>
+      </div>
+    </section>
+    </main>
 
-  <!-- The footer allows users to navigate to adjacent pages -->
-  <footer>
-    <p>Press "n" to go back.</p>
-    <a class="navigation-button" href="aria.html">Back to ARIA</a>
-  </footer>
-  <script src="../javascript/script.js"></script>
+    <!-- The footer allows users to navigate to adjacent pages -->
+    <footer>
+      <p>Press "n" to go back or "m" to go continue.</p>
+      <a class="navigation-button" href="semantic-html.html">Back to Semantic HTML</a>
+      <a class="navigation-button" href="references.html">Forward to Useful Links</a>
+    </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>

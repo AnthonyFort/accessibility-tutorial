@@ -4,12 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Font Size</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <title>Useful Links</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
   <!-- The header contains a nav menu, light/dark mode toggle, and font-size adjuster. -->
   <header>
     <button aria-label="Menu" aria-controls="navigation" aria-expanded="false" id="sidebar-open-button">☰</button>
@@ -41,38 +40,49 @@
     </div>
   </header>
 
-  <!-- Main section contains an explanation and an exercise. -->
+  <!-- The main section comprises a nested list of useful links. -->
   <main>
-    <section id="intro-content">
-      <div class="text-content">
-        <h2>Font Size</h2>
-        <h3>Issue</h3>
-        <p>For some users, the default font size is too small.</p>
-        <h3>Solution</h3>
-        <p>Make the font size adjustable.</p>
-      </div>
-      <div class="text-content exercise" aria-labelledby="exercise-heading">
-        <h3 id="exercise-heading">Exercise</h3>
-        <p>Use the "+" and "-" buttons in the top right corner to change the font size.</p>
-        <div class="svg-div">
-          <svg aria-hidden="true" id="font-size-svg" height="48" viewBox="0 0 48 48" width="48"
-            xmlns="http://www.w3.org/2000/svg">
-            <path d="m0 0h48v48h-48z" fill="none" />
-            <path d="m2 23h7v20h6v-20h7v-6h-20z" />
-            <path d="m46 5h-32v6h13v32h6v-32h13z" />
-          </svg>
-        </div>
-      </div>
-    </section>
+    <h2 id="links-title">Useful Links</h2>
+    <ul id="links-list">
+      <li class="links-headings">Colour
+        <ol>
+          <li><a href="https://webaim.org/projects/lowvisionsurvey2/">Survey of users with low vision</a></li>
+          <li><a href="https://webaim.org/resources/contrastchecker/">Free online contrast checker</a></li>
+        </ol>
+      </li>
+      <li class="links-headings">Font Size
+        <ol>
+          <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html">Explanation of rationale for text
+              resizing feature</a></li>
+          <li><a href="https://webaim.org/projects/steppingstones/cognitiveresearch">Article including summary of
+              font-size research findings</a></li>
+        </ol>
+      </li>
+      <li class="links-headings">Keyboard Navigation
+        <ol>
+          <li><a href="https://webaim.org/techniques/keyboard/">Summary of keyboard accessibility topics</a></li>
+        </ol>
+      </li>
+      <li class="links-headings">Semantic HTML
+        <ol>
+          <li><a href="https://www.w3schools.com/html/html5_semantic_elements.asp">Summary of semantic HTML</a></li>
+          <li><a href="https://webaim.org/resources/htmlcheatsheet/">Semantic HTML cheat sheet</a></li>
+        </ol>
+      </li>
+      <li class="links-headings">ARIA
+        <ol>
+          <li><a href="https://webaim.org/techniques/aria/">Introductory article to ARIA</a></li>
+        </ol>
+      </li>
+    </ul>
   </main>
 
   <!-- The footer allows users to navigate to adjacent pages -->
   <footer>
-    <p>Press "n" to go back or "m" to go continue.</p>
-    <a class="navigation-button" href="colour.html">Back to Colour</a>
-    <a class="navigation-button" href="keyboard-nav.html">Forward to Keyboard Navigation</a>
+    <p>Press "n" to go back.</p>
+    <a class="navigation-button" href="aria.html">Back to ARIA</a>
   </footer>
-  <script src="../javascript/script.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
