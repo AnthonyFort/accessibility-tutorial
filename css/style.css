@@ -73,6 +73,9 @@ header {
   position: absolute;
   right: 10px;
   color: #242424;
+  border: none;
+  background: none;
+  font-size: 35px;
 }
 
 .sidebar ul {
@@ -96,7 +99,7 @@ header {
   border: none;
   color: #242424; 
   padding: 12px;
-  font-size: 2rem;
+  font-size: 40px;
   cursor: pointer;
 }
 
