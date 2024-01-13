@@ -302,3 +302,11 @@ legend {
 .navigation-button {
   margin-left: 30px;
 }
+
+#svg-head {
+  fill: #FFB2B2;
+}
+
+#svg-body {
+  fill: #A5C9FF;
+}
