@@ -33,8 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const fontSizesInRem = [1, 1.125, 1.25, 1.375, 1.5]
 
-  const imageWidthsInPx = [180, 190, 200, 210, 220]
-
   sidebarOpenButton.addEventListener('click', function(e) {
     e.stopPropagation()
     this.setAttribute('aria-expanded', 'true')
@@ -98,10 +96,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (currentFontSizeIndex < fontSizesInRem.length - 1){
       currentFontSizeIndex++
       documentBody[0].style.fontSize = `${fontSizesInRem[currentFontSizeIndex]}rem`
-      // const scaleFactor = ((currentFontSizeIndex + 1) * 1.1) / fontSizesInRem.length
-      // svgs.forEach(svg => {
-      //   svg.style.transform = `scale(${scaleFactor})`
-      // })
       savePreferences()
     } 
   })
@@ -110,10 +104,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (currentFontSizeIndex > 0) {
       currentFontSizeIndex--
       documentBody[0].style.fontSize = `${fontSizesInRem[currentFontSizeIndex]}rem`
-      // const scaleFactor = fontSizesInRem[currentFontSizeIndex]
-      // svgs.forEach(svg => {
-      //   svg.style.transform = `scale(${scaleFactor})`
-      // })
       savePreferences()
     }
   })
@@ -168,13 +158,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const storedFontSizeIndex = parseInt(localStorage.getItem('fontSizeIndex'), 10)
     currentFontSizeIndex = storedFontSizeIndex
     documentBody[0].style.fontSize = `${fontSizesInRem[currentFontSizeIndex]}rem`
-    svgs.forEach(svg => {
-      svg.style.width = `${imageWidthsInPx[currentFontSizeIndex]}px`
-    })
   }
-  
-  
-
   loadPreferences()
-  
 })

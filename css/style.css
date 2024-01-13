@@ -44,6 +44,9 @@ body {
   #font-size-svg {
     fill: #F8F8F8;
   }
+  svg {
+    fill: #F8F8F8;
+  }
 }
 
 header {
@@ -304,6 +307,7 @@ legend {
 
 .exercise h3 {
   text-align: center;
+  
 }
 
 .navigation-button {
@@ -326,4 +330,8 @@ legend {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#keyboard-svg {
+  padding: 10px;
 }
