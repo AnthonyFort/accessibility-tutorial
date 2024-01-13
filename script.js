@@ -167,7 +167,9 @@ document.addEventListener('DOMContentLoaded', function() {
       lightModeSwitchButton.querySelector('input').checked = true
     }
     const storedFontSizeIndex = parseInt(localStorage.getItem('fontSizeIndex'), 10)
-    currentFontSizeIndex = storedFontSizeIndex
+    if (storedFontSizeIndex !== null) {
+      currentFontSizeIndex = parseInt(storedFontSizeIndex, 10)
+    }
     documentBody[0].style.fontSize = `${fontSizesInRem[currentFontSizeIndex]}rem`
   }
   loadPreferences()
