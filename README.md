@@ -12,7 +12,7 @@ HTML, CSS, JavaScript
 
 ## Planning and Execution
 
-- Day 1: I made a written brief of the project.
+- Day 1: I made a written [brief](accessibility-brief.pdf) of the project.
 - Day 2: Working from the brief, I produced a [wireframe](https://www.figma.com/file/B4S2ADKNtlOMnnx31wkY7D/Accessibility-Tutorial?type=design&node-id=0-1&mode=design&t=ePtCZfP6809pnS46-0).
 - Day 3: I coded most of the tutorial in VS code.
 - Day 4: I finished coding and deployed the tutorial on Netlify.
