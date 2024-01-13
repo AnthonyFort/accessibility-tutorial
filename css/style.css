@@ -41,6 +41,9 @@ body {
   #sidebar-close-button {
     color: #F8F8F8;
   }
+  #font-size-svg {
+    fill: #F8F8F8;
+  }
 }
 
 header {
@@ -159,8 +162,12 @@ footer {
   width: 100%;
 }
 
-#intro-image {
+svg {
   width: 180px;
+  fill: #333333;
+}
+
+#intro-image {
   fill: #333333;
 }
 
@@ -309,4 +316,14 @@ legend {
 
 #svg-body {
   fill: #A5C9FF;
+}
+
+#font-size-svg {
+  fill: #333333;
+}
+
+.svg-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
