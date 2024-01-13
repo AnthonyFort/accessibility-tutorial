@@ -279,6 +279,7 @@ legend {
 .semantic-option-header {
   margin-bottom: 0px;
   margin-left: 22px;
+  margin-top: 0px;
 }
 
 #semantic-answer {
@@ -334,4 +335,8 @@ legend {
 
 #keyboard-svg {
   padding: 10px;
+}
+
+#colour-exercise {
+  max-height: 430px;
 }
