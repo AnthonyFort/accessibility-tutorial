@@ -14,14 +14,13 @@ document.addEventListener('DOMContentLoaded', function() {
   const semanticAnswertext = document.getElementById('semantic-answer-text')
   const ariaAnswerButton = document.getElementById('aria-answer-button')
   const sampleAriaAnswer = document.getElementById('sample-aria-answer')
-  const svgs = document.querySelectorAll('svg')
   
   let isSidebarOpen = false
   let lightModeOn = true
   let currentFontSizeIndex = 0
   let ariaAnswerVisible = false
 
-  const pageList = [
+  const fileList = [
     'index.html',
     'colour.html',
     'font-size.html',
@@ -31,7 +30,13 @@ document.addEventListener('DOMContentLoaded', function() {
     'references.html'
   ]
 
+  const currentLocation = window.location.href
+  const filename = currentLocation.match(/[^/]*$/)
+  const pageIndex = fileList.indexOf(filename[0])
+
   const fontSizesInRem = [1, 1.125, 1.25, 1.375, 1.5]
+
+
 
   sidebarOpenButton.addEventListener('click', function(e) {
     e.stopPropagation()
@@ -74,20 +79,16 @@ document.addEventListener('DOMContentLoaded', function() {
       savePreferences()
     }
   })
-  
 
   document.addEventListener('keydown', function(e){
-    const currentLocation = window.location.href
-    const filename = currentLocation.match(/[^/]*$/)
-    const index = pageList.indexOf(filename[0])
-    if (e.key === 'n' || e.key === 'N') {
-      if (index + 1 < pageList.length) {
-        window.location.href = `../html/${pageList[index + 1]}`
+    if (e.key === 'm' || e.key === 'M') {
+      if (pageIndex + 1 < fileList.length) {
+        window.location.href = `../html/${fileList[pageIndex + 1]}`
       }   
     }
-    if (e.key === 'p' || e.key === 'P') {
-      if (index > 0) {
-        window.location.href = `../html/${pageList[index - 1]}`
+    if (e.key === 'n' || e.key === 'N') {
+      if (pageIndex > 0) {
+        window.location.href = `../html/${fileList[pageIndex - 1]}`
       }
     }
   })

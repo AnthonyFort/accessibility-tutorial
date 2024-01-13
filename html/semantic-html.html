@@ -9,7 +9,7 @@
 <body>
   <header>
     <button aria-label="Menu" aria-controls="navigation" aria-expanded="false" id="sidebar-open-button">☰</button>
-    <nav role="navigation" aria-expanded="false" class="sidebar">
+    <nav aria-expanded="false" class="sidebar">
       <button id="sidebar-close-button" >X</button>
       <ul>
         <li><a href="index.html" tabindex="-1" class="sidebar-item">Introduction</a></li>
@@ -48,7 +48,7 @@
   </section>
   <section>
     <form >
-      <fieldset id="semantic-html-question">
+      <fieldset id="semantic-html-question" aria-labelledby="exercise-title">
         <h3 id="exercise-title">Exercise</h3>
         <legend id="semantic-legend">Which code snippet uses semantic HTML?</legend> 
         <div>
@@ -78,8 +78,8 @@
   </section>
   </main>
   <footer>
-    <a class="navigation-button" href="keyboard-nav.html">Previous</a>
-    <a class="navigation-button" href="aria.html">Next</a>
+    <a class="navigation-button" href="keyboard-nav.html">Back to Keyboard Navigation</a>
+    <a class="navigation-button" href="aria.html">Forward to ARIA</a>
   </footer>
   <script src="../javascript/script.js"></script>
 </body>

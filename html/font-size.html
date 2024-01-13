@@ -11,7 +11,7 @@
 <body>
   <header>
     <button aria-label="Menu" aria-controls="navigation" aria-expanded="false" id="sidebar-open-button">☰</button>
-    <nav role="navigation" aria-expanded="false" class="sidebar">
+    <nav aria-expanded="false" class="sidebar">
       <button id="sidebar-close-button">X</button>
       <ul>
         <li><a href="index.html" tabindex="-1" class="sidebar-item">Introduction</a></li>
@@ -47,11 +47,12 @@
         <h3>Solution</h3>
         <p>Make the font size adjustable.</p>
       </div>
-      <div class="text-content exercise">
+      <div class="text-content exercise" aria-label="Exercise">
         <h3>Exercise</h3>
         <p>Use the "+" and "-" buttons in the top right corner to change the font size.</p>
         <div class="svg-div">
-          <svg id="font-size-svg" height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg">
+          <svg aria-hidden="true" id="font-size-svg" height="48" viewBox="0 0 48 48" width="48"
+            xmlns="http://www.w3.org/2000/svg">
             <path d="m0 0h48v48h-48z" fill="none" />
             <path d="m2 23h7v20h6v-20h7v-6h-20z" />
             <path d="m46 5h-32v6h13v32h6v-32h13z" />
@@ -61,8 +62,8 @@
     </section>
   </main>
   <footer>
-    <a class="navigation-button" href="colour.html">Previous</a>
-    <a class="navigation-button" href="keyboard-nav.html">Next</a>
+    <a class="navigation-button" href="colour.html">Back to Colour</a>
+    <a class="navigation-button" href="keyboard-nav.html">Forward to Keyboard Navigation</a>
   </footer>
   <script src="../javascript/script.js"></script>
 </body>
